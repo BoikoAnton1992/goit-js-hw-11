@@ -3,12 +3,22 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import cross from '../img/cross.png';
+import '../css/styles.css';
 
 const search = document.querySelector('.search');
 const button = document.querySelector('.button');
+const loader = document.querySelector('.loader');
 
 const KEY = '42554743-967d4a87bc85b22a32926b61b';
 const BASE_URI = 'https://pixabay.com/api/';
+
+function showLoader() {
+  loader.classList.remove('hidden');
+}
+
+function hideLoader() {
+  loader.classList.add('hidden');
+}
 
 function getImagesFromServer(searchvalue) {
   const LINK = `${BASE_URI}?key=${KEY}&q=${searchvalue}`;
@@ -75,6 +85,7 @@ function initializeLightbox(images) {
   });
 }
 function showImages(searchValue) {
+  showLoader();
   getImagesFromServer(searchValue)
     .then(data => {
       const images = data.hits.slice(0, 9);
@@ -94,6 +105,9 @@ function showImages(searchValue) {
     })
     .catch(error => {
       console.error('Error while loading images:', error.message);
+    })
+    .finally(() => {
+      hideLoader();
     });
 }
 
