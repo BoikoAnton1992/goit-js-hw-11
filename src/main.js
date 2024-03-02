@@ -9,7 +9,7 @@ import createGalleryMarkup from './js/render-functions';
 
 const search = document.querySelector('.search');
 const loader = document.querySelector('.loader');
-const submit = document.querySelector('.input-container');
+const searchForm = document.querySelector('.input-container');
 
 function showLoader() {
   loader.classList.remove('is-hidden');
@@ -54,7 +54,7 @@ function showImages(searchValue) {
     });
 }
 
-submit.addEventListener('submit', evt => {
+searchForm.addEventListener('submit', evt => {
   evt.preventDefault();
   const value = search.value.trim();
   showImages(value);
