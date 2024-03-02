@@ -1,7 +1,7 @@
 const KEY = '42554743-967d4a87bc85b22a32926b61b';
 const BASE_URI = 'https://pixabay.com/api/';
 
-export function getImagesFromServer(searchvalue) {
+export default function getImagesFromServer(searchvalue) {
   const LINK = `${BASE_URI}?key=${KEY}&q=${searchvalue}`;
   return fetch(LINK)
     .then(response => {

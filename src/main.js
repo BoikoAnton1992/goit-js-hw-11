@@ -4,8 +4,8 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import cross from './img/cross.png';
 import './css/styles.css';
-import { getImagesFromServer } from './js/pixabay-api';
-import { createGalleryMarkup } from './js/render-functions';
+import getImagesFromServer from './js/pixabay-api';
+import createGalleryMarkup from './js/render-functions';
 
 const search = document.querySelector('.search');
 const loader = document.querySelector('.loader');
