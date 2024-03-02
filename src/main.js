@@ -26,6 +26,7 @@ function initializeLightbox(images) {
     captionsData: 'alt',
     captionDelay: 250,
   });
+  lightbox.refresh();
 }
 function showImages(searchValue) {
   showLoader();
