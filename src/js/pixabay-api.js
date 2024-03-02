@@ -1,9 +1,3 @@
-import 'simplelightbox/dist/simple-lightbox.min.css';
-import 'izitoast/dist/css/iziToast.min.css';
-import '../css/styles.css';
-
-const loader = document.querySelector('.loader');
-
 const KEY = '42554743-967d4a87bc85b22a32926b61b';
 const BASE_URI = 'https://pixabay.com/api/';
 
@@ -18,6 +12,5 @@ export function getImagesFromServer(searchvalue) {
     })
     .catch(error => {
       console.error('Error while fetching images from pixabay:', error.message);
-      return [];
     });
 }

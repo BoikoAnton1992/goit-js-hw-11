@@ -222,7 +222,8 @@ button:focus {
 
 
 .loader {
-  display: none;
+  display: flex;
+  justify-content: center;
   border: 5px solid #f3f3f3;
   border-top: 5px solid #3498db;
   border-radius: 50%;
@@ -230,9 +231,9 @@ button:focus {
   height: 50px;
   animation: spin 1s linear infinite;
   position: fixed;
-  top: 50%;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 
 @keyframes spin {
@@ -245,6 +246,16 @@ button:focus {
   }
 }
 
-.loader.hidden {
-  display: none;
+.is-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
