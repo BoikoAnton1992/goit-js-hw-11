@@ -11,16 +11,17 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-05fce982.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-7659544d.js">
     <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-a51daae5.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-d0033483.css">
   </head>
   <body>
     <div class="container">
-      <div class="input-container">
+      <form class="input-container">
         <input class="search" name="message" placeholder="Search images..." />
-        <button class="button" type="button">Search</button>
-      </div>
-      <div class="loader"></div>
+        <button class="button" type="submit">Search</button>
+      </form>
+      <div class="loader is-hidden"></div>
       <ul class="gallery"></ul>
       
     </div>
